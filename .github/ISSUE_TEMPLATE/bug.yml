@@ -1,0 +1,66 @@
+name: Bug report
+description: Something in LagrangeCloud is broken or behaves unexpectedly.
+title: "[Bug] "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting. **This issue is public: never paste API keys, secrets, tokens or private data.** Replace them with `***`.
+        For a security vulnerability, email contact@tensorblock.co instead of opening an issue.
+  - type: dropdown
+    id: area
+    attributes:
+      label: Where did it happen?
+      options:
+        - Console (lgr.tensorblock.co/console)
+        - Plugin in Claude Code
+        - Plugin in Codex
+        - CLI (lgr)
+        - API / endpoint
+        - Chat widget on a site
+        - Schedules, webhooks or callbacks
+        - Improvements (RSI)
+        - Billing or credits
+        - Docs or website
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: What went wrong, and what did you expect instead?
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. ...
+        2. ...
+        3. ...
+    validations:
+      required: true
+  - type: input
+    id: ids
+    attributes:
+      label: Agent ID and run ID
+      description: If it relates to an agent or a run. Shown in the console, e.g. `ag_...` and `run_...`.
+  - type: input
+    id: page
+    attributes:
+      label: Page URL
+      description: The console or docs page where it happened, if any.
+  - type: textarea
+    id: logs
+    attributes:
+      label: Error message or logs
+      description: Remove any keys, tokens or private data first.
+      render: shell
+  - type: input
+    id: environment
+    attributes:
+      label: Environment
+      description: Browser and OS, or Claude Code / Codex version, if relevant.

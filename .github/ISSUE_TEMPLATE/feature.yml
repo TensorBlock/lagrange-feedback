@@ -1,0 +1,28 @@
+name: Feature request
+description: Suggest something new or a change to LagrangeCloud.
+title: "[Feature] "
+labels: ["feature"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for the idea. Please search existing issues first; if it is already there, a 👍 helps us prioritize it.
+        **This issue is public: never paste API keys, secrets, tokens or private data.**
+  - type: textarea
+    id: problem
+    attributes:
+      label: What problem are you trying to solve?
+      description: Describe what you were doing and what got in the way.
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: What would you like to happen?
+    validations:
+      required: true
+  - type: textarea
+    id: workaround
+    attributes:
+      label: How do you handle it today?
+      description: Any workaround or alternative you use now.
